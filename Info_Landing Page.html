@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Información del Restaurante</title>
+  <style>
+    :root{
+      --rojo: #c5564f;   
+      --rojo-osc:#b14841;
+      --verde:#3BAA57;   
+      --verde-osc:#2f8f49;
+      --texto:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background:#f4f4f4;
+      color:#222;
+    }
+    .wrapper{
+      max-width:1100px;
+      margin:40px auto;
+      padding:0 16px;
+    }
+    .card{
+      display:grid;
+      grid-template-columns: 1.1fr 1fr; 
+      background:#fff;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    .img-side{
+      position:relative;
+      min-height:380px;
+      background:#ddd;
+    }
+    .img-side img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .info-side{
+      background:var(--rojo);
+      color:var(--texto);
+      padding:32px 28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    h1{
+      margin:0 0 14px;
+      font-size: clamp(24px, 2.4vw, 34px);
+      line-height:1.2;
+    }
+    p{
+      margin:0 0 22px;
+      font-size: clamp(15px, 1.25vw, 18px);
+      line-height:1.6;
+    }
+    .btn{
+      display:inline-block;
+      padding:14px 22px;
+      background:var(--verde);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:8px;
+      transition: transform .08s ease, background .2s ease;
+      width:max-content;
+    }
+    .btn:hover{ background:var(--verde-osc); transform: translateY(-1px); }
+    .badge{
+      position:absolute;
+      left:16px; top:16px;
+      background:rgba(0,0,0,.55);
+      color:#fff;
+      padding:6px 10px;
+      font-size:13px;
+      border-radius:999px;
+      letter-spacing:.3px;
+    }
+    @media (max-width: 860px){
+      .card{ grid-template-columns: 1fr; }
+      .img-side{ min-height:320px; }
+      .info-side{ padding:26px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <section class="card">
+   
+      <div class="img-side">
+        <span class="badge">Cocina Italiana</span>
+        
+        <img src="Unnamed Site 2/Pasta img.jpeg" alt="Plato de pasta con salsa de tomate, albahaca y queso parmesano">
+      </div>
+		
+      <div class="info-side">
+        <h1>El Sabor de Italia en la Belleza de Honduras</h1>
+        <p>
+          Es una experiencia culinaria única que fusiona la auténtica gastronomía italiana con
+          los paisajes tropicales y el encanto natural de Honduras. Disfrute de pastas frescas,
+          pizzas artesanales y vinos selectos en un ambiente que celebra lo mejor de dos culturas:
+          la pasión italiana y la calidez hondureña.
+        </p>
+        <a class="btn" href="#mas-info">Más Información</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
